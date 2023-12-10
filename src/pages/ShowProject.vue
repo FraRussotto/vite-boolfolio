@@ -34,9 +34,9 @@ import axios from 'axios';
   <div>
     <h1>Project: {{ project.name }}</h1>
     <span>Data: {{ project.date }}</span>
-    <p>{{ project.description }}</p>
-    <span>{{ project.tecnologies?.name }}</span>
-    <span>{{ project.type?.name }}</span>
+    <p>Description: {{ project.description }}</p>
+    <span v-if="(project.tecnology)">Tecnologies: {{ project.tecnologies?.name }}</span>
+    <span v-if="(project.type)">Types: {{ project.type?.name }}</span>
   </div>
 </template>
 
