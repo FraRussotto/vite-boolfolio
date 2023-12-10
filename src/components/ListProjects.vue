@@ -19,7 +19,9 @@ import { store } from '../data/store';
   <div>
     <ul>
       <li v-for="project in store.projects" :key="project.id">
-        <p>{{ project.name }}</p>
+        <router-link :to="{name: 'showproject', params:{slug: project.slug}}">
+          {{ project.name }}
+        </router-link>
       </li>
     </ul>
   </div>
@@ -29,6 +31,9 @@ import { store } from '../data/store';
 <style lang="scss" scoped>
 ul{
   list-style-type: none;
+  a{
+    text-decoration: none;
+  }
 }
 
 
