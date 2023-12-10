@@ -26,6 +26,10 @@ import { store } from '../data/store';
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style lang="scss" scoped>
+ul{
+  list-style-type: none;
+}
+
 
 </style>

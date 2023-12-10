@@ -33,9 +33,26 @@
 
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style lang="scss" scoped>
 header{
-  text-align: center;
+  width: 100%;
+  height: 100px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ul{
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+    li{
+      margin: 0 20px;
+    }
+  }
+}
+
+.active {
+  font-weight: bold;
 }
 
 </style>
