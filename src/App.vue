@@ -1,56 +1,31 @@
 <script>
 
-import { store } from './data/store';
-import axios from "axios";
-import ListProjects from './components/ListProjects.vue'
-import Paginator from './components/partials/Paginator.vue';
+  import Header from './components/partials/Header.vue';
 
-export default{
-  name: 'App',
-  components: {
-    ListProjects,
-    Paginator
-  },
-
-  data(){
-    return {
-      links: [],
-    }
-  },
-
-    methods: {
-      getApi(url) {
-        axios.get(url)
-      .then(result => {
-          store.projects = result.data.data;
-          this.links = result.data.links;
-        })
-      },
+  export default {
+    name: 'App',
+    components: {
+      Header
     },
-
-    mounted() {
-      this.getApi(store.apiUrl + 'projects');
-    }
-}
-
+    data() {
+      return {}
+    },
+    computed: {},
+    mounted() {},
+    methods: {}
+  }
 </script>
 
-
 <template>
-<div class="container">
-  <ListProjects />
-  <Paginator :links="links" @getUrl="getApi" />
-</div>
+  <Header />
+  <div class="container">
+    <RouterView />
 
+  </div>
 </template>
 
-<style lang="scss">
 
-button{
-  margin: 0 5px;
-  padding: 10px;
-  color: white;
-  cursor: pointer;
-}
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style>
 
 </style>

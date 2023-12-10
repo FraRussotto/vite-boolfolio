@@ -2,7 +2,12 @@ body {
   background-color: antiquewhite;
   ul {
     list-style-type: none;
+    display: flex;
+    li {
+      margin: 0 10px;
+    }
   }
+  color: black;
 }
 
 * {
