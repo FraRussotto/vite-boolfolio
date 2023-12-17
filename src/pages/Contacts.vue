@@ -1,17 +1,22 @@
 <script>
+
+import ContactForm from '@/components/partials/ContactForm.vue';
+
   export default {
-    name: 'Home',
+    name: 'Contact',
+    components: 'ContactForm',
     data() {
-      return {}
+        return {};
     },
     computed: {},
-    mounted() {},
-    methods: {}
-  }
+    mounted() { },
+    methods: {},
+    components: { ContactForm }
+}
 </script>
 
 <template>
-  <div>Contacts</div>
+  <ContactForm />
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
